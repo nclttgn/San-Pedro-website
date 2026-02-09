@@ -307,10 +307,14 @@ input, textarea, select {
 }
 
 .checkbox-group {
-  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  gap: 8px;
   padding: 10px;
   background-color: var(--gold-light);
   border-radius: 6px;
+}
+
 }
 
 .checkbox-group label {
