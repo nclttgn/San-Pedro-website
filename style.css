@@ -269,7 +269,10 @@ section.bg-light {
 }
 
 .badge-primary {
-    background: linear-gradient(135deg, var
+  background: linear-gradient(135deg, var(--gold-medium), var(--gold-dark));
+  color: white;
+}
+
 
                                 
 /* Forms */
