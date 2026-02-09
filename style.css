@@ -306,7 +306,7 @@ input, textarea, select {
   width: 100%;
   padding: 8px;
   margin-top: 5px;
-  border: px solid var(--gold-light);
+  border: 1px solid var(--gold-light);
   border-radius: 4px;
 }
 
