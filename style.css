@@ -276,92 +276,153 @@ section.bg-light {
 
                                 
 /* Forms */
-
 form {
   max-width: 700px;
   margin: auto;
-  padding: 20px;
-  border: 1px solid var(--brown-medium);
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(50, 20, 20, 0.2);
+  padding: 30px;
+  border: 1px solid var(--gold-medium);
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(50, 20, 20, 0.15);
   background-color: var(--ivory);
 }
 
-h2 {
+.form-header {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   color: var(--gold-dark);
+  font-family: 'Cinzel', serif;
 }
 
-/* Labels + inputs side by side */
-label {
+/* Form group styling - better structure */
+.form-group {
+  margin-bottom: 20px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 10px;
-  font-weight: bold;
+  flex-direction: column;
 }
 
-label input,
-label textarea,
-label select {
+.form-row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.form-row .form-group {
   flex: 1;
-  margin-left: 10px;
+  margin-bottom: 0;
+}
+
+/* Labels */
+label {
+  font-weight: 600;
+  color: var(--brown-medium);
+  margin-bottom: 8px;
+  font-size: 1rem;
+  display: block; /* Changed from flex */
 }
 
 /* Inputs styling */
 input, textarea, select {
   width: 100%;
-  padding: 8px;
-  border: 1px solid var(--gold-light);
-  border-radius: 4px;
+  padding: 12px 15px;
+  border: 2px solid var(--gold-light);
+  border-radius: 6px;
+  background-color: var(--off-white);
+  font-family: 'Crimson Text', serif;
+  font-size: 1rem;
+  transition: all 0.3s ease;
 }
 
-/* Checkbox group in two columns */
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--gold-medium);
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+  background-color: white;
+}
+
+/* Checkbox group in two columns - fixed */
 .checkbox-group {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8px;
-  padding: 10px;
-  background-color: var(--gold-light);
-  border-radius: 6px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  padding: 20px;
+  background-color: rgba(244, 228, 193, 0.3);
+  border-radius: 8px;
+  border: 1px solid var(--gold-light);
+  margin-bottom: 20px;
+}
+
+.checkbox-group .form-group {
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: auto;
+  margin-right: 10px;
+  transform: scale(1.2);
 }
 
 .checkbox-group label {
-  font-weight: normal;
-  display: flex;
-  align-items: center;
+  margin-bottom: 0;
+  font-weight: 600;
+  color: var(--brown-dark);
+  cursor: pointer;
 }
 
 /* Section title */
 .section-title {
-  margin-top: 20px;
+  margin-top: 25px;
+  margin-bottom: 15px;
   font-style: italic;
   font-weight: bold;
-  color: var(--brown-medium);
-  border-top: 1px solid var(--gold-medium);
-  padding-top: 10px;
+  color: var(--brown-dark);
+  border-top: 2px solid var(--gold-medium);
+  padding-top: 15px;
+  font-family: 'Cinzel', serif;
+  font-size: 1.3rem;
 }
 
-/* Button */
-button {
-  margin-top: 20px;
-  padding: 10px 15px;
-  background-color: var(--gold-medium);
-  color: var(--charcoal);
+/* Form button */
+.form-button {
+  margin-top: 30px;
+  padding: 14px 30px;
+  background: linear-gradient(135deg, var(--gold-medium), var(--gold-dark));
+  color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 30px;
   cursor: pointer;
-  font-size: 15px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  display: block;
+  width: 100%;
+  transition: all 0.3s ease;
+  font-family: 'Cinzel', serif;
 }
 
-button:hover {
-  background-color: var(--gold-dark);
-  color: var(--ivory);
+.form-button:hover {
+  background: linear-gradient(135deg, var(--gold-rich), var(--gold-medium));
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(212, 175, 55, 0.4);
+}
+
+/* For the specific form fields in your request form */
+.form-group.special {
+  background: rgba(244, 228, 193, 0.2);
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid var(--gold-medium);
 }
 
 @media print {
-  button {
+  button, .form-button {
     display: none;
+  }
+  
+  form {
+    box-shadow: none;
+    border: 1px solid #ccc;
   }
 }
