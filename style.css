@@ -274,8 +274,6 @@ section.bg-light {
                                 
 /* Forms */
 
-/* Forms */
-
 form {
   max-width: 700px;
   margin: auto;
@@ -291,7 +289,8 @@ h2 {
   margin-bottom: 20px;
   color: var(--gold-dark);
 }
-/* Put labels and inputs side by side */
+
+/* Labels + inputs side by side */
 label {
   display: flex;
   justify-content: space-between;
@@ -300,43 +299,38 @@ label {
   font-weight: bold;
 }
 
-label input, label textarea, label select {
+label input,
+label textarea,
+label select {
   flex: 1;
   margin-left: 10px;
 }
 
-
-label {
-  display: block;
-  margin-top: 10px;
-  font-weight: bold;
-}
-
+/* Inputs styling */
 input, textarea, select {
   width: 100%;
   padding: 8px;
-  margin-top: 5px;
   border: 1px solid var(--gold-light);
   border-radius: 4px;
 }
 
+/* Checkbox group in two columns */
 .checkbox-group {
   display: grid;
-  grid-template-columns: 1fr 1fr; 
+  grid-template-columns: 1fr 1fr;
   gap: 8px;
   padding: 10px;
   background-color: var(--gold-light);
   border-radius: 6px;
 }
 
-}
-
 .checkbox-group label {
   font-weight: normal;
-  display: block;
-  margin-top: 5px;
+  display: flex;
+  align-items: center;
 }
 
+/* Section title */
 .section-title {
   margin-top: 20px;
   font-style: italic;
@@ -346,10 +340,11 @@ input, textarea, select {
   padding-top: 10px;
 }
 
+/* Button */
 button {
   margin-top: 20px;
   padding: 10px 15px;
-  background-color: var(--gold-medium); 
+  background-color: var(--gold-medium);
   color: var(--charcoal);
   border: none;
   border-radius: 5px;
@@ -358,7 +353,7 @@ button {
 }
 
 button:hover {
-  background-color: var(--gold-dark); 
+  background-color: var(--gold-dark);
   color: var(--ivory);
 }
 
