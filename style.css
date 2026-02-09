@@ -291,6 +291,20 @@ h2 {
   margin-bottom: 20px;
   color: var(--gold-dark);
 }
+/* Put labels and inputs side by side */
+label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+label input, label textarea, label select {
+  flex: 1;
+  margin-left: 10px;
+}
+
 
 label {
   display: block;
