@@ -285,15 +285,17 @@ section.bg-light {
     --spacing: 20px;
 }
 
-#requestForm {
-    font-family: 'Times New Roman', Times, serif;
-    background-color: #f9f9f9;
-    color: var(--text-color);
-    line-height: 1.4;
-    padding: 40px 20px;
-    margin: 0;
+#requestForm { 
+	max-width: 800px; 
+	margin: 40px auto; 
+	background-color: #ffffff; 
+	padding: 40px; 
+	border: 1px solid #ccc; 
+	box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+	font-family: 'Times New Roman', Times, serif; 
+	color: var(--text-color);
+	line-height: 1.4;
 }
-
 
 
 /* FORM TITLE */
