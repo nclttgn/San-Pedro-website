@@ -476,10 +476,7 @@ section.bg-light {
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-    body {
-        padding: 20px 10px;
-    }
-    
+  
     #requestForm {
         padding: 20px;
     }
